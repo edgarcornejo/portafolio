@@ -1,0 +1,42 @@
+@import("social-footer.styl")
+/*Footer*/
+#main-footer
+  width 100%
+  display flex
+  align-items center
+  flex-wrap wrap
+  border-bottom 5px solid var(--greenMate)
+
+#logo-footer
+  background url(../img/logo.png) no-repeat center var(--greenMate)
+  min-height 80px
+  max-height 80px
+  width 100%
+  max-width 200px
+  &:after
+    display block
+    content ''
+    position relative
+    left 100%
+    width 0
+    height 0
+    border-bottom 80px solid var(--greenMate)
+    border-right 30px solid transparent
+
+.header
+  position sticky
+  top 0
+  left 0
+  right 0
+  padding 1.5em 0
+  transition .3s background
+  &-logo
+    display inline-flex
+    width 150px
+    height 40px
+    background url(../img/edgar-cornejo-logo.png) no-repeat center
+    background-size contain
+  &-content
+    display flex
+    justify-content: space-between
+    align-items: center

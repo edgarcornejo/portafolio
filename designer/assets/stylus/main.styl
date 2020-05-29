@@ -1,0 +1,681 @@
+@import "menu.styl"
+@import "footer.styl"
+
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*Reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  vertical-align top
+  outline 0
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  text-rendering optimizeLegibility
+
+html
+  font-size 1em
+  line-height 1.4
+  height 100%
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection
+  background #b3d4fc
+  text-shadow none
+
+::selection
+  background #b3d4fc
+  text-shadow none
+
+/*
+ * A better looking default horizontal rule
+ */
+hr
+  display block
+  height 1px
+  border 0
+  border-top 1px solid #ccc
+  margin 1em 0
+  padding 0
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align middle
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset
+  border 0
+  margin 0
+  padding 0
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea
+  resize vertical
+
+@-webkit-viewport
+  width device-width
+@-moz-viewport
+  width device-width
+@-ms-viewport
+  width device-width
+@-o-viewport
+  width device-width
+@viewport
+  width device-width
+
+/*Paleta Color*/
+:root
+  --hardWhite: #FFFFFF
+  --greenLiquid: #A0EAEB
+  --greenPastel: #6AC8C7
+  --greenMate: #0FAAA7
+  --greenPure: #0D8796
+  --hardGreen: #262626
+
+a
+  color #FFF
+  text-decoration none
+  &:hover
+    color #014A98
+
+/*Transiciones*/
+.anin-rapido
+  -webkit-transition all 0.2s ease-out
+  -moz-transition all 0.2s ease-out
+  -o-transition all 0.2s ease-out
+  -ms-transition all 0.2s ease-out
+  transition all 0.2s ease-out
+
+.anin-normal
+  -webkit-transition all 0.5s ease-out
+  -moz-transition all 0.5s ease-out
+  -o-transition all 0.5s ease-out
+  -ms-transition all 0.5s ease-out
+  transition all 0.5s ease-out
+
+.anin-lento
+  -webkit-transition all 1s ease-out
+  -moz-transition all 1s ease-out
+  -o-transition all 1s ease-out
+  -ms-transition all 1s ease-out
+  transition all 1s ease-out
+
+/*Principal*/
+body
+  width 100%
+  height 100%
+  color #FFF
+  font-size 16px
+  font-family 'Open Sans',Helvetica,Arial,sans-serif
+  background-color var(hardWhite)
+
+#main-content
+  width 100%
+  height auto
+  margin 0 auto
+
+/*Logotipo*/
+#logo
+  background url(../img/logo.png) no-repeat center var(--greenMate)
+  min-height 80px
+  max-height 80px
+  width 100%
+  max-width 200px
+  &:after
+    display block
+    content ''
+    position relative
+    left 100%
+    width 0
+    height 0
+    border-top 80px solid var(--greenMate)
+    border-right 30px solid transparent
+
+.logo
+  transition all 0.2s ease-out
+  color var(--greenPure)
+  &.scroll
+    color transparent !important
+
+/*Titulo*/
+#main-header
+  width 100%
+  display flex
+  align-items center
+  flex-wrap wrap
+  position fixed
+  z-index 100
+  border-top 5px solid var(--greenMate)
+  h1
+    font-size 1.5em
+    font-weight 400
+    letter-spacing -0.5px
+    word-spacing 2px
+    text-transform uppercase
+  a
+    color var(--greenPure)
+    
+#main-title
+  padding-left 3em
+
+/*Contenido*/
+#content
+  width 100%
+  height 100%
+  padding 22% 0 22% 0
+  margin 0 auto
+  text-align center
+
+/*Reglas para contenido igual*/
+.title-article
+  font-size 3em
+  padding 1em 0 0em 0
+  text-align center
+
+.txt
+  margin 1em auto
+  max-width 800px
+  width 90%
+  font-size 1.6em
+  text-align justify
+
+#content-intro
+  width 100%
+  height auto
+  margin 0 auto
+  color var(--hardGreen)
+  padding 8em 0 8em 0
+  div
+    background url(../img/sprite.png) no-repeat center -55px
+    background-size 600px
+    height 250px
+
+#content-presentation
+  width 100%
+  height auto
+  margin 0 auto
+  background var(--greenPure)
+  padding 8em 0 8em 0
+  background-size cover
+  color #FFFFFF
+  div
+    background url(../img/sprite.png) no-repeat center -380px
+    background-size 600px
+    height 250px
+
+#content-services
+  width 100%
+  height auto
+  margin 0 auto
+  color var(--hardGreen)
+  text-align center
+  padding 8em 0 8em 0
+  .img-services
+    background url(../img/sprite.png) no-repeat center -700px
+    background-size 600px
+    height 250px
+
+#list-services
+  margin 2em auto
+  width 90%
+  max-width 1024px
+  height auto
+  display flex
+  align-items center
+  flex-wrap wrap
+  justify-content space-around
+
+.iten-services
+  padding 2em 0 2em 0
+  width 100%
+  max-width 180px
+  margin-bottom 2em
+  color #000000
+  h3
+    font-weight 400
+    font-size 16px
+    padding-top 1em
+  img
+    width auto/9
+    height auto
+    min-width 20%
+
+.app
+  margin 0 auto
+  width 100px
+  height 100px
+  background-image url(../img/servicios.svg)
+  background-repeat no-repeat
+
+.relogo
+  background-position center -124.42px
+
+.brochure
+  background-position center -249px
+
+.afiches
+  background-position center -373px
+
+.flayers
+  background-position center -497px
+
+.vectorizaciones
+  background-position center -622px
+
+.gigantografias
+  background-position center -747px
+
+.mascotas
+  background-position center -871px
+
+.merchandise
+  background-position center -995px
+
+.tarjetas
+  background-position center -1119px
+
+#content-habilidades
+  width 100%
+  height auto
+  margin 0 auto
+  background var(--greenPure)
+  color #FFFFFF
+  padding 8em 0 8em 0
+  div
+    background url(../img/sprite.png) no-repeat center -1020px
+    background-size 600px
+    height 250px
+
+#contacto
+  width 100%
+  height auto
+  margin 0 auto
+  color var(--hardGreen)
+  padding 8em 0 8em 0
+  text-align center
+  div
+    background url(../img/sprite.png) no-repeat center -1345px
+    background-size 600px
+    height 250px
+  a
+    color var(--greenMate)
+
+/*Recomendación*/
+#main-contain
+  width 100%
+  height 100%
+  background var(--hardWhite)
+
+#sub-contain
+  width 90%
+  max-width 1300px
+  margin 0 auto
+  padding 200px 0 200px 0
+  display grid
+  grid-row-gap 100px
+  article
+    background var(--greenPastel)
+    border-radius 3px
+    display grid
+    grid-template-columns 30% 70%
+    .a
+      text-align center
+      grid-row-start 1
+      grid-row-end 3
+      padding 100px 0 100px 0
+      background-size 40%
+    .b
+      text-align left
+      grid-row-start 1
+      grid-row-end 2
+      align-self center
+      font-size 1.8em
+      padding 50px 0 20px 0
+    .c
+      text-align left
+      grid-row-start 2
+      grid-row-end 3
+      align-self center
+      font-size 1.3em
+      padding 10px 0 50px 0
+      width 90%
+      text-align justify
+.aa
+  background url("../img/brave-logotype-dark.svg") no-repeat center
+
+.bb
+  background url("../img/mamp.png") no-repeat center
+
+.cc
+  background url("../img/prepros.png") no-repeat center
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden
+  display none !important
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+  clip auto
+  height auto
+  margin 0
+  overflow visible
+  position static
+  width auto
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible
+  visibility hidden
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after
+  content " "
+  display table
+
+.clearfix:after
+  clear both
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/*@media screen and (max-width:1366px)
+
+@media screen and (max-width:1024px)*/
+
+@media screen and (max-width:768px)
+  #content
+    padding 5em 0 5em 0
+
+  /*Logotipo*/
+  #logo,
+  #logo-footer
+    height 100px
+    max-height none
+    max-width none
+    &:after
+      display none
+
+  /*Titulo*/
+  #main-header,
+  #main-footer
+    display block
+    position static
+
+  #main-header h1
+    font-size 28px
+    text-align center
+
+  #main-title
+    padding 2em 0 2em 0
+
+  /*Botonera Social*/
+  #social-footer
+    position static
+    display flex
+    align-items center
+    flex-wrap wrap
+    justify-content space-around
+    &:before
+      display none
+    a
+      margin-right 0
+
+  /*Nav Footer*/
+  #nav-footer ul
+    display block
+    padding-left 0
+    li
+      font-size 21px
+      padding 1em 0 1em 0
+      text-indent 0
+      border none
+
+@media screen and (max-width:480px)
+  #social-footer
+    display block
+    width 100%
+
+  #social-footer a
+    display inline-block
+    margin-left 20px
+    margin-top 20px
+
+  #list-services
+    display block
+
+  .iten-services
+    margin 1em auto
+  
+  .app
+    background-image url(../img/servicio.png)
+
+  #content img
+    width auto/9
+    height auto
+    max-width 50%
+
+  .title-article
+    font-size 21px
+    padding 1em 0 1em 0
+
+  .txt
+    width 85%
+    font-size 16px
+
+  #content-intro div
+    display none
+
+  #content-presentation div
+    display none
+
+  #content-services div
+    display none
+
+  #content-habilidades div
+    display none
+
+  #contacto div
+    display none
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print
+  *,
+  *:before,
+  *:after
+    background transparent !important
+    color #000 !important
+    box-shadow none !important
+    text-shadow none !important
+
+  a,
+  a:visited
+    text-decoration underline
+
+  a[href]:after
+    content " (" attr(href) ")"
+
+  abbr[title]:after
+    content " (" attr(title) ")"
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after
+    content: ""
+
+  pre,
+  blockquote
+    border 1px solid #999
+    page-break-inside avoid
+
+  thead
+    display table-header-group
+
+  tr,
+  img
+    page-break-inside avoid
+
+  img
+    max-width 100% !important
+
+  p,
+  h2,
+  h3
+    orphans 3
+    widows 3
+
+  h2,
+  h3
+    page-break-after avoid

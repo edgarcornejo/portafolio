@@ -1,0 +1,109 @@
+/*Botonera Social-Footer*/
+#social-footer
+  background var(--greenMate)
+  position fixed
+  right 0
+  bottom 0
+  display flex
+  align-items center
+  flex-wrap wrap
+  &:before
+    display block
+    content ''
+    position relative
+    width 0
+    left -30px
+    height 0
+    border-left 30px solid transparent
+    border-bottom 80px solid var(--greenMate)
+  a
+    margin-right 15px
+    background url(../img/sprite.png) no-repeat
+    display block
+    width 48px
+    height 48px
+    border-radius 3px
+    font-size 0
+    color transparent
+    text-indent 99999999px
+    -webkit-transition all 0.2s ease-out
+    -moz-transition all 0.2s ease-out
+    -o-transition all 0.2s ease-out
+    -ms-transition all 0.2s ease-out
+    transition all 0.2s ease-out
+    &:hover
+      background-color var(--greenPure)
+  a:nth-child(1)
+    background-position -8px 0
+  /*a:nth-child(2)
+    background-position -50px 0*/
+  a:nth-child(2)
+    background-position -95px 0
+  a:nth-child(3)
+    background-position -132px 0
+  a:nth-child(4)
+    background-position -180px 0
+  a:nth-child(5)
+    background-position -222px 0
+  a:nth-child(6)
+    background-position -266px 0
+  a:nth-child(7)
+    background-position -308px 0
+  a:nth-child(8)
+    background-position -351px 0
+  a:nth-child(9)
+    background-position -395px 0
+  a:nth-child(10)
+    background-position -442px
+
+.menu
+  visibility hidden
+  position absolute
+  opacity 0
+  left 0
+  right 0
+  top: 100%
+  background var(--greenPure)
+  height 100vh
+  transform translateY(-50px)
+  transition .3s transform, .3s opacity
+  will-change transform
+  ul
+    padding 0
+    list-style: none
+  li
+    border-top 1px solid var(--greenLiquid)
+    &:last-child
+      a
+        border: 2px solid var(--greenLiquid)
+        border-radius: 5px
+        margin-top 1em
+        padding .7em
+  a
+    color white
+    text-decoration none
+    text-transform uppercase
+    display block
+    text-align center
+    padding 1em
+    letter-spacing 2px
+  &-open
+    user-select: none
+    width 40px
+    height 40px
+    display inline-flex
+    cursor pointer
+    background url('../img/icon-hamburger.svg') no-repeat center
+  &-checkbox
+    display none
+    &:checked
+      & ~ .header
+        background var(--greenPure)
+        .menu-open
+          background-image url('../img/icon-close.svg')
+        & .header-logo
+          background-image url('../img/logo.png')
+        & .menu
+          transform translateY(0)
+          visibility visible
+          opacity 1
