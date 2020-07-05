@@ -1,79 +1,14 @@
+@import "reset.styl"
+@import "main-menu.styl"
+@import "second-head.styl"
+@import "footer.styl"
+
 :root
   font-size 16px
   --eCeleste hsl(195, 77%, 57%)
   --eAzul hsl(255, 77%, 57%)
   --eRed hsl(345, 77%, 57%)
   --eDark hsl(236, 77%, 14%)
-
-/*reset*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
-  border 0
-  box-sizing border-box
-  font-size 100%
-  margin 0
-  outline 0
-  padding 0
-  text-rendering optimizeLegibility
-  vertical-align top
-
-li
-  list-style none
-
-@-webkit-viewport
-  width device-width
-
-@-moz-viewport
-  width device-width
-
-@-ms-viewport
-  width device-width
-
-@viewport
-  width device-width
-
-::-webkit-scrollbar
-  width 15px
-
-::-webkit-scrollbar-track
-  background-color rgba(0,0,0,0.1)
-
-::-webkit-scrollbar-thumb
-  border-radius 5px
-  background-color var(--eCeleste)
-
-img
-  vertical-align middle
-
-/*Estilos de pagina*/
-body
-  background #FFFFFF
-  font-family 'Ubuntu',Helvetica,Arial,sans-serif
-  font-variant-ligatures no-common-ligatures
-  width 100%
-  height 100%
-  color var(--eDark)
-  background linear-gradient(90deg, #FFF 20px, transparent 1%) center, linear-gradient(#FFF 20px, transparent 1%) center, #BFEEFF 
-  background-size 22px 22px
-
-html
-  width 100%
-  height 100%
-
-a
-  text-decoration none
-  color var(--eCeleste)
-  &:hover
-    color var(--eDark)
-
-/*Animacion basica*/
-.anin-rapido
-  transition all .2s ease-out
-
-.anin-normal
-  transition all .5s ease-out
-
-.anin-lento
-  transition all 1s ease-out
 
 //Inicio
 #inicio
@@ -103,30 +38,6 @@ a
     font-size 3.3rem
     font-weight normal
     padding-bottom 8rem
-
-//Menu Principal
-#topnav
-  border-top solid 2px var(--eCeleste)
-  height 3rem
-  text-align center
-  width 100%
-  ul
-    display flex
-    height 3rem
-    margin 0 auto
-    max-width 1300px
-
-#main_nav
-  li
-    width 20%
-    line-height 5rem
-    a
-      cursor pointer
-      font-size 1.4rem
-      letter-spacing 1px
-      text-transform uppercase
-      &:hover
-        font-weight bold
 
 /*Secciones principales*/
 .main-section
@@ -267,16 +178,6 @@ a
       font-size 1.2rem
       font-weight normal
       width 110px
-      
-/*Pie*/
-footer
-  font-size 1.2rem
-  height auto
-  margin 0 auto
-  max-width 1300px
-  padding 2rem 0 2rem 0
-  text-align right
-  width 90%
 
 /*Pagina Presentacion*/
 .logo
@@ -289,46 +190,6 @@ footer
   &.scroll
     top 60px
 
-/*Menu otras paginas*/
-#topnav2
-  height 80px
-  width 100%
-  ul
-    display flex
-    height 80px
-    margin 0 auto
-    max-width 1300px
-
-#main_nav2
-  li
-    width 20%
-    a
-      cursor pointer
-      display block
-      font-size 1.4rem
-      font-weight lighter
-      line-height 80px
-      text-align center
-    &.change a
-      color var(--eCeleste)
-    :hover
-      color var(--eAzul)
-    .selector
-      border-top solid 5px var(--eAzul)
-      color var(--eAzul)
-      font-size 1.5rem
-      font-weight normal
-
-.selector
-  &:after
-    border-left 8px solid transparent
-    border-right 8px solid transparent
-    border-top 8px solid var(--eAzul)
-    content ""
-    display block
-    margin -5px auto
-    width 0
-
 /*Titulo de pagina*/
 #head-title
   margin 0 auto
@@ -339,36 +200,6 @@ footer
     font-size 5rem
     text-align right
     color var(--eCeleste)
-
-/*Navegacion por pagina*/
-#navigation-per-page
-  left 100px
-  margin-top 6rem
-  position fixed
-  width 180px
-  ul
-    height auto
-    width 100%
-  li
-    font-size 1.4rem
-    font-weight lighter
-    line-height 3rem
-    text-align right
-  a
-    &.current
-      color var(--eAzul)
-      font-weight normal
-      &:after
-        border-bottom 5px solid transparent
-        border-left 5px solid var(--eAzul)
-        border-top 5px solid transparent
-        content ""
-        display inline-block
-        margin-left 5px
-        width 0
-
-.isStuck
-  z-index 80
 
 /*Paginas Secundarias*/
 #main-content
@@ -422,110 +253,6 @@ footer
   &:hover
     color #FFF
     background var(--eAzul)
-
-/*Pagina de Publicaciones*/
-#publicaciones
-  padding 50px 5% 50px 5%
-  display flex
-  justify-content space-around
-  div
-    max-width 30%
-    padding 10px
-    h3
-      font-size 37px
-      text-align center
-  a
-    border-left solid 5px var(--eCeleste)
-    display block
-    margin-bottom 20px
-    padding 10px
-    &:hover
-      color var(--eCeleste)
-  p
-    font-size 21px
-
-.page-noticias
-  .section
-    &:nth-child(odd)
-      background #FFF
-      border-top solid 2px gris-1
-    &:nth-child(even)
-      background #FFF
-      border-top solid 2px gris-1
-      padding-top 50px
-
-.publicaciones-cabecera
-  height auto
-  padding 40px 0 50px 0
-  text-align center
-  width 100%
-  hgroup
-    margin 0 auto
-    max-width 90%
-  h1
-    font-size 67px
-    padding-top 20px
-  h2
-    border 0 !important
-    font-size 21px !important
-    padding 0 !important
-  .ed
-    border solid 8px #B1B1B1
-    border-radius 50%
-    height 200px
-    width 200px
-  #autor a
-    color #B1B1B1
-
-.atras
-  height 50px
-  left 3%
-  position fixed
-  top 5%
-
-.arriba
-  bottom 5%
-  height 50px
-  position fixed
-  right 3%
-
-//busqueda
-#busqueda
-  margin 0 auto
-  max-width 1024px
-
-.text-recomendation
-  font-size 28px
-  font-style italic
-  margin-bottom 1em
-
-.social
-  padding 30px 0 20px
-
-#comentarios
-  display block
-  margin 0 auto
-  max-width 1024px
-  padding 30px 0 30px 0
-  width 90%
-
-#recomendation
-  margin 0 auto
-  max-width 1024px
-  padding 25px 0 5px 0
-  width 90%
-
-.videoWrapper
-  height 0
-  padding-bottom 56.25%
-  padding-top 25px
-  position relative
-  iframe
-    height 100%
-    left 0
-    position absolute
-    top 0
-    width 100%
 
 /*Portafolio*/
 .content-service
@@ -794,6 +521,18 @@ footer
     font-size 1rem
 
 @media screen and (max-width:620px)
+  #inicio 
+    .llamame
+      display block
+      margin-left 0
+      margin-top 1rem
+    h1
+      font-size 2rem
+      padding-top 2rem
+    h2
+      padding-top 1rem
+      font-size 1.8rem
+
   #topnav,#topnav2
     border 0
     ul
@@ -825,20 +564,9 @@ footer
     img
       filter grayscale(0)
     .desaturar
-     opacity 1
+      opacity 1
 
 @media screen and (max-width:480px)
-  #inicio 
-    .llamame
-      margin-left 0
-      margin-top 1rem
-    h1
-      font-size 2rem
-      padding-top 2rem
-    h2
-      padding-top 1rem
-      font-size 1.8rem
-  
   .main-section
     article
       padding 4rem 0 4rem 0
