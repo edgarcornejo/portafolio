@@ -1,60 +1,88 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Página no encontrada</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+<meta charset="utf-8">
+<title>Página no encontrada</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * {
+    line-height: 1.2;
+    margin: 0;
+  }
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
+  html {
+    color: #888;
+    display: table;
+    font-family: sans-serif;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    font-size: 16pxs;
+  }
 
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
-        }
+  body {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2em auto;
+    background: #0FAAA7;
+    color: #FFF;
+  }
 
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
+  img {
+    width: auto/9;
+    height: auto;
+    max-width: 100px;
+    padding-bottom: 3em;
+  }
 
-        h1 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
+  h1 {
+    font-size: 3em;
+    padding-bottom: 0.4em;
+  }
 
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
+  p {
+    margin: 0 auto;
+    width: 360px;
+    font-size: 1.2em;
+    padding-bottom: 2em;
+  }
 
-        @media only screen and (max-width: 280px) {
+  a {
+    display: inline-block;
+    padding: 15px;
+    border: solid 1px #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #0D8796;
+    color: #FFF;
+  }
 
-            body, p {
-                width: 95%;
-            }
+  a:hover {
+    background: none;
+  }
 
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
+  @media only screen and (max-width: 280px) {
 
-        }
+    body,
+    p {
+      width: 95%;
+    }
 
-    </style>
+    h1 {
+      font-size: 1.5em;
+      margin: 0 0 0.3em;
+    }
+  }
+</style>
 </head>
 <body>
+  <div>
+    <img src="static/img/logo.png" alt="Logotipo Edgar Cornejo">
     <h1>Página no encontrada</h1>
-    <p>Disculpe, pero la página que está intentado ver no existe.</p>
+    <p>Disculpe fue nuestro error, la página que está intentando ver no existe.</p>
+    <a href="http://www.edgarcornejo.com/designer/" title="Volver a Edgar Cornejo">Volver a Edgar Cornejo</a>
+    <a href="https://www.google.com/" title="Continuar buscando">Continuar buscando</a>
+  </div>
 </body>
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
