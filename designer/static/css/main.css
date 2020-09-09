@@ -357,7 +357,7 @@ body {
   width: 0;
   height: 0;
   border-top: 80px solid var(--greenMate);
-  border-right: 30px solid transparent;
+  border-right: 30px dotted transparent;
 }
 .logo {
   transition: all 0.2s ease-out;
