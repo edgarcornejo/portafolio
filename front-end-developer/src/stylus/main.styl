@@ -13,6 +13,7 @@
 
 @import "reset.styl"
 @import "helper.styl"
+@import "header.styl"
 
 :root
   font-size 16px
@@ -24,24 +25,24 @@
 
 #cabecera
   height 100vh
-  width 100vw
-  background rgb(78,20,73)
-  background linear-gradient(0deg, rgba(78,20,73,1) 0%, rgba(144,37,133,1) 100%)
+  width 100%
+  background rgb(205,38,252);
+  background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%)
   color var(--White)
   font-family 'Poiret One', Helvetica, sans-serif
-  display flex
+  #wrap-hgroup
+    display flex
+    justify-content flex-end
   hgroup
-    max-width 90%
+    padding-top 30rem
+    width 82%
+    text-align left
     h1
       font-size 5rem
-      font-weight lighter
       letter-spacing -2px
     h2
       text-transform uppercase
-      font-size 1rem
+      font-size 2rem
       font-weight lighter
-      padding-top 1rem
-      letter-spacing 15px
-
-
-
+      padding-top 0.5rem
+      letter-spacing 2px
