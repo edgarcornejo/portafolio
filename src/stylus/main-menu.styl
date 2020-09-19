@@ -21,3 +21,35 @@
       text-transform uppercase
       &:hover
         font-weight bold
+
+.menu-checkbox
+  display none
+
+@media screen and (max-width:640px) 
+  #topnav
+    border 0
+    height auto
+    ul
+      display none
+      height auto
+      li
+        width 100%
+        line-height 4rem
+        border-top solid 1px var(--eCeleste)
+
+  .menu-open
+    user-select none
+    cursor pointer
+    height 40px
+    width 40px
+    background url('../img/icon-hamburger.svg') no-repeat center
+    background-size 60%
+    display inline-block
+    margin-bottom 1rem
+
+  .menu-checkbox:checked ~ #topnav
+    .menu-open
+      background url('../img/icon-close.svg') no-repeat center !important
+      background-size 60% !important
+    ul
+      display block

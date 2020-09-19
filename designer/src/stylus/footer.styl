@@ -1,4 +1,3 @@
-@import("social-footer.styl")
 /*Footer*/
 #main-footer
   width 100%
@@ -8,7 +7,8 @@
   border-bottom 5px solid var(--greenMate)
 
 #logo-footer
-  background url(../img/logo.png) no-repeat center var(--greenMate)
+  background url(../img/edgarcornejo.svg) no-repeat 50% 55% var(--greenMate)
+  background-size 40%
   min-height 80px
   max-height 80px
   width 100%
@@ -23,20 +23,129 @@
     border-bottom 80px solid var(--greenMate)
     border-right 30px solid transparent
 
-.header
-  position sticky
-  top 0
-  left 0
+/*Nav Footer*/
+#nav-footer
+  padding-left 2rem
+  display flex
+  align-items center
+  .open-menu
+    user-select none
+    cursor pointer
+    width 48px
+    height 48px
+    display block
+    background url("../img/icon-hamburger.svg") no-repeat center
+    background-size 70%
+  ul
+    display none
+    align-items center
+    padding-left 1rem
+  li
+    text-transform uppercase
+    list-style none
+    line-height 25px
+  a
+    color var(--greenPure)
+    transition all 0.2s ease-out
+    &:hover
+      color #4A4A4A
+  p
+    color var(--greenPure)
+
+.input-menu
+  display none
+  &:checked ~ #main-footer
+    .open-menu
+      background url("../img/icon-close.svg") no-repeat center !important
+      background-size 70% !important
+    ul
+      display block
+    a
+      display block
+
+/*Botonera Social-Footer*/
+#social-footer
+  background var(--greenMate)
+  position fixed
   right 0
-  padding 1.5em 0
-  transition .3s background
-  &-logo
-    display inline-flex
-    width 150px
-    height 40px
-    background url(../img/edgar-cornejo-logo.png) no-repeat center
-    background-size contain
-  &-content
-    display flex
-    justify-content: space-between
-    align-items: center
+  bottom 0
+  display flex
+  align-items center
+  flex-wrap wrap
+  &:before
+    display block
+    content ''
+    position relative
+    width 0
+    left -30px
+    height 0
+    border-left 30px solid transparent
+    border-bottom 80px solid var(--greenMate)
+  a
+    margin-right 15px
+    background url(../img/icon-social.svg) no-repeat
+    background-size cover
+    width 48px
+    height 48px
+    border-radius 3px
+    text-indent 100%
+    white-space nowrap
+    overflow hidden
+    transition all 0.2s ease-out
+    &:hover
+      background-color var(--greenPure)
+  a:nth-child(1)
+    background-position 0 0
+  a:nth-child(2)
+    background-position -48px 0
+  a:nth-child(3)
+    background-position -96px 0
+  a:nth-child(4)
+    background-position -144px 0
+  a:nth-child(5)
+    background-position -195px 0
+  a:nth-child(6)
+    background-position -240px 0
+
+@media screen and (max-width:940px)
+  #main-footer
+    display block
+  
+  #logo-footer
+    min-height 80px
+    max-height auto
+    width 100%
+    max-width 100%
+    margin 0 auto
+    background-size 10%
+    &:after
+      display none
+  
+  #nav-footer
+    padding-left 0
+    display block
+    width 100%
+    margin 0 auto
+    padding-top 1rem
+    padding-bottom 2rem
+    ul
+      padding-top 1rem
+      display block
+      margin 0 auto
+      width 100%
+      padding-left 0
+      text-align center
+      li
+        line-height 2rem
+  
+  .open-menu
+    display none !important
+
+  #social-footer
+    position static
+    align-items center
+    justify-content center
+    padding-top 1rem
+    padding-bottom 0.5rem
+    &:before
+      display none

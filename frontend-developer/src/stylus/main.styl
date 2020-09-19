@@ -1,3 +1,7 @@
+@import "reset.styl"
+@import "helper.styl"
+@import "header.styl"
+
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -10,14 +14,6 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-@import "reset.styl"
-@import "helper.styl"
-@import "header.styl"
-
-:root
-  font-size 16px
-  --White #FFFFFF
 
 /*Principal*/
 #contenedor
@@ -34,15 +30,38 @@
     display flex
     justify-content flex-end
   hgroup
-    padding-top 30rem
+    padding-top 25%
     width 82%
     text-align left
     h1
       font-size 5rem
-      letter-spacing -2px
+      letter-spacing 2px
     h2
       text-transform uppercase
       font-size 2rem
       font-weight lighter
-      padding-top 0.5rem
-      letter-spacing 2px
+      font-family 'Roboto', Helvetica, sans-serif
+
+#cuerpo
+  margin 0 auto
+  width 90%
+  max-width 1200px
+  padding 2rem 0 2rem 0
+  article
+    padding-bottom 2rem
+    display flex
+    header
+      width 30%
+      //box-shadow 0.2rem 0.2rem 1rem #C0C0C0
+      h2
+        font-size 2rem
+        border-left solid 0.5rem var(--devGrape)
+        border-radius 5px
+        padding 2rem 0 2rem 1rem
+    p
+      width 70%
+      display block
+      margin 0 auto
+      padding 2rem 0 2rem 1rem
+      font-size 2.5rem
+      font-family 'Poiret One', Helvetica, sans-serif

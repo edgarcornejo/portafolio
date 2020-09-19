@@ -67,3 +67,39 @@
 
 .isStuck
   z-index 80
+
+.menu-checkbox2
+  display none
+
+@media screen and (max-width:780px) 
+  #topnav2
+    border 0
+    height auto
+    ul
+      display none
+      height auto
+      li
+        width 100%
+        line-height 3rem
+        border-top solid 1px var(--eCeleste)
+
+  .menu-open2
+    user-select none
+    cursor pointer
+    height 40px
+    width 40px
+    background url('../img/icon-hamburger.svg') no-repeat center
+    background-size 60%
+    display block
+    margin 0 auto
+
+  .menu-checkbox2:checked ~ #topnav2
+    .menu-open2
+      background url('../img/icon-close.svg') no-repeat center !important
+      background-size 60% !important
+    ul
+      display block
+    .selector
+      border 0
+      &:after
+        display none

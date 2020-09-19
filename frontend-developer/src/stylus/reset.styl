@@ -1,3 +1,8 @@
+:root
+  font-size 16px
+  --White #FFFFFF
+  --devGrape #5B0DBE
+
 /*Reset*/
 html,
 body,
@@ -86,8 +91,6 @@ video
   font-size 100%
   vertical-align top
   outline 0
-  -moz-box-sizing border-box
-  -webkit-box-sizing border-box
   box-sizing border-box
   text-rendering optimizeLegibility
 
@@ -115,6 +118,14 @@ body
 ::selection
   background #b3d4fc
   text-shadow none
+
+::-webkit-scrollbar
+  width 1rem
+::-webkit-scrollbar-track
+  border-radius 0.2rem
+::-webkit-scrollbar-thumb
+  background #8F71F8
+  border-radius 0.2rem
 
 /*
  * A better looking default horizontal rule

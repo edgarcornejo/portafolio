@@ -1,0 +1,396 @@
+:root {
+  font-size: 16px;
+  --White: #fff;
+  --devGrape: #5b0dbe;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: top;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0.2rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #8f71f8;
+  border-radius: 0.2rem;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+.anin-rapido {
+  transition: all 0.2s ease-out;
+}
+.anin-normal {
+  transition: all 0.5s ease-out;
+}
+.anin-lento {
+  transition: all 1s ease-out;
+/*Enlaces*/
+}
+a {
+  color: var(--White);
+  text-decoration: none;
+}
+.hidden {
+  display: none !important;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+#cabecera #wrap-logo-nav {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+}
+#cabecera #wrap-logo-nav .menu-open {
+  -webkit-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background: url("../img/icon-hamburger.svg") no-repeat center;
+  background-size: 60%;
+}
+#cabecera #logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cabecera #logo img {
+  width: 80px;
+}
+#cabecera nav {
+  width: 60%;
+  display: flex;
+}
+#cabecera nav ul {
+  display: none;
+}
+#cabecera nav li {
+  font-size: 1.5rem;
+  width: 25%;
+  list-style: none;
+  text-align: center;
+}
+#cabecera nav li a:hover {
+  font-weight: bolder;
+  border-bottom: solid 1px #fff;
+}
+#cabecera #contact {
+  text-align: right;
+  width: 20%;
+}
+#cabecera #contact a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#cabecera #contact a:first-child {
+  background: url("../img/icon-tel.svg") no-repeat center;
+}
+#cabecera #contact a:last-child {
+  background: url("../img/icon-mail.svg") no-repeat center;
+}
+#cabecera #contact a:hover {
+  background-color: #00f;
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-checkbox:checked ~ #wrap-logo-nav .menu-open {
+  background: url("../img/icon-close.svg") no-repeat center !important;
+  background-size: 60% !important;
+}
+.menu-checkbox:checked ~ #wrap-logo-nav ul {
+  display: flex;
+  width: 100%;
+}
+.menu-checkbox:checked ~ #wrap-logo-nav #logo {
+  justify-content: flex-start;
+}
+/* HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*Principal*/
+#contenedor {
+  height: 100%;
+}
+#cabecera {
+  height: 100vh;
+  width: 100%;
+  background: #cd26fc;
+  background: linear-gradient(-45deg, #cd26fc 0%, #8c3ef4 53%, #9184fa 100%);
+  color: var(--White);
+  font-family: 'Poiret One', Helvetica, sans-serif;
+}
+#cabecera #wrap-hgroup {
+  display: flex;
+  justify-content: flex-end;
+}
+#cabecera hgroup {
+  padding-top: 25%;
+  width: 82%;
+  text-align: left;
+}
+#cabecera hgroup h1 {
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+#cabecera hgroup h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+#cuerpo {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem 0 2rem 0;
+}
+#cuerpo article {
+  padding-bottom: 2rem;
+  display: flex;
+}
+#cuerpo article header {
+  width: 30%;
+}
+#cuerpo article header h2 {
+  font-size: 2rem;
+  border-left: solid 0.5rem var(--devGrape);
+  border-radius: 5px;
+  padding: 2rem 0 2rem 1rem;
+}
+#cuerpo article p {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 1rem;
+  font-size: 2.5rem;
+  font-family: 'Poiret One', Helvetica, sans-serif;
+}

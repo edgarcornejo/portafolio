@@ -17,6 +17,8 @@
   width 100%
   #logo-c
     display inline-block
+    max-width 110px
+    height auto
   .llamame
     display inline-block
     padding 1rem
@@ -127,8 +129,9 @@
 #social
   margin-bottom 3rem
   a
-    background url("../img/icon-logo.png") var(--eCeleste)
-    border-radius 5px
+    background url("../img/icon-social.svg") no-repeat var(--eCeleste)
+    background-size cover
+    border-radius 4px
     color transparent
     display inline-block
     font-size 0
@@ -137,26 +140,24 @@
     text-indent -99999999px
     width 48px
     &:nth-child(1)
-      background-position -10px 0
+      background-position 0 0
     &:nth-child(2)
-      background-position -73px 0
+      background-position -48px 0
     &:nth-child(3)
-      background-position -138px 0
+      background-position -96px 0
     &:nth-child(4)
-      background-position -200px 0
+      background-position -143px 0
     &:nth-child(5)
-      background-position -265px 0
+      background-position -191px 0
     &:nth-child(6)
-      background-position -333px 0
+      background-position -243px 0
     &:nth-child(7)
-      background-position -390px 0
+      background-position -287px 0
     &:nth-child(8)
-      background-position -455px 0
-    &:nth-child(9)
-      background-position -519px 0
+      background-position -336px 0
     &:hover
       background-color var(--eAzul)
-      transform rotate(360deg)
+      transform scale3d(1.2, 1.2, 1)
 
 .list
   &.mailing-list
@@ -532,26 +533,6 @@
     h2
       padding-top 1rem
       font-size 1.8rem
-
-  #topnav,#topnav2
-    border 0
-    ul
-      flex-wrap wrap
-  
-  #main_nav,#main_nav2
-    li
-      border-top solid 1px var(--eCeleste)
-      border-right solid 1px var(--eCeleste)
-      width 50%
-      line-height 3rem
-      a
-        font-size 1rem
-        line-height 3rem
-      .selector
-        border 0
-        font-size 1rem
-        &:after
-          display none
   
   .marcas
     .marcas-container
