@@ -1,4 +1,12 @@
 #cabecera
+  a
+    border none
+    background none
+    padding 0
+    border-radius 0
+    color var(--devWhite)
+    &:hover
+      border 0
   #wrap-logo-nav
     width 80%
     margin 0 auto
@@ -31,7 +39,7 @@
       text-align center
       a:hover
         font-weight bolder
-        border-bottom solid 1px white
+        border-bottom solid 1px var(--devWhite)
   #contact
     text-align right
     width 20%
@@ -48,7 +56,7 @@
       &:last-child
         background url('../img/icon-mail.svg') no-repeat center
       &:hover
-        background-color blue
+        background-color var(--devGrape)
 
 .menu-checkbox
   display none
