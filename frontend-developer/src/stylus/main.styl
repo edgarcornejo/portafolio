@@ -25,7 +25,7 @@
   background rgb(205,38,252);
   background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%)
   color var(--devWhite)
-  font-family 'Poiret One', Helvetica, sans-serif
+  font-family 'Titillium Web', Helvetica, sans-serif
   #wrap-hgroup
     display flex
     justify-content flex-end
@@ -46,24 +46,41 @@
   margin 0 auto
   width 90%
   max-width 1200px
-  padding 2rem 0 2rem 0
+  padding 5% 0 5% 0
   article
-    padding-bottom 3rem
+    padding-bottom 8%
     display flex
-    header
-      width 30%
-      h2
-        font-family 'Poiret One', Helvetica, sans-serif
-        font-size 2rem
-        border-left solid 0.5rem var(--devOrange)
-        border-radius 5px
-        padding 2rem 0 2rem 1rem
-    p
-      width 70%
-      display block
-      margin 0 auto
-      padding 2rem 0 2rem 1rem
+    flex-wrap wrap
+    justify-content flex-end
+    .wrap-article
+      width 50%
+    h2
+      font-family 'Titillium Web', Helvetica, sans-serif
+      font-size 4rem
+      line-height 3.8rem
+      padding-bottom 1rem
+      color var(--devGrape)
+    h3
       font-size 2rem
+      font-weight bolder
+      padding-bottom 2rem
+      text-transform uppercase
+      color var(--devLightGrey)
+    p
+      font-size 1.5rem
+      font-weight 200
+      line-height 2rem
+    .bot-call
+      background var(--devGrape)
+      display inline-block
+      font-size 1.2rem
+      color var(--devWhite)
+      border 0
+
+footer
+  position relative
+  padding 4rem 0 4rem 0
+  background var(--devGrape)
 
 #pie
   margin 0 auto
@@ -72,25 +89,78 @@
   padding 1rem 0 3rem 0
   display flex
   justify-content space-around
+  .contacto
+    width 30%
+    a
+      border solid 1px var(--devWhite)
+      font-size 1.2rem
+      line-height 3rem
+      color var(--devWhite)
+    p
+      font-family 'Titillium Web', Helvetica, sans-serif
+      font-weight bolder
+      margin-bottom 2rem
+      font-size 1.5rem
+      text-transform uppercase
+      color var(--devOrange)
+      letter-spacing 2px
+      text-align right
+      &:after
+        display block
+        content ""
+        position relative
+        width 90%
+        border-bottom dotted 2px var(--devOrange)
+        padding-bottom .5rem
   ul
     width 30%
     li
       list-style none
+      text-align right
       &:first-child
-        font-family 'Poiret One', Helvetica, sans-serif
+        font-family 'Titillium Web', Helvetica, sans-serif
         font-weight bolder
         margin-bottom 2rem
         font-size 1.5rem
         text-transform uppercase
         color var(--devOrange)
+        letter-spacing 2px
         &:after
           display block
           content ""
           position relative
           width 90%
-          max-width 180px
-          border-bottom solid 2px var(--devGrape)
+          border-bottom dotted 2px var(--devOrange)
           padding-bottom .5rem
       a
         font-size 1.2rem
         line-height 3rem
+        color var(--devWhite)
+
+#copyright
+  font-size 0.9rem
+  display block
+  width 90%
+  max-width 1200px
+  margin 0 auto
+  text-align right
+  color var(--devWhite)
+
+.adorno
+  position absolute
+  width 100%
+  top 0
+  right 0
+  div
+    position absolute
+    width 100px
+    height 100px
+    background var(--devOrange)
+    top -50px
+    right 100px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 50%
+    img
+      max-width 60%
