@@ -37,7 +37,9 @@
       width 25%
       list-style none
       text-align center
-      a:hover
+    a
+      font-family 'Roboto', Helvetica, sans-serif
+      &:hover
         font-weight bolder
         border-bottom solid 1px var(--devWhite)
   #contact
@@ -48,15 +50,15 @@
       white-space nowrap
       overflow hidden
       display inline-block
-      width 40px
-      height 40px
+      width 48px
+      height 48px
       border-radius 50%
       &:first-child
-        background url('../img/icon-tel.svg') no-repeat center
+        background url('../img/icon-tel.svg') no-repeat center var(--devWhite)
       &:last-child
-        background url('../img/icon-mail.svg') no-repeat center
+        background url('../img/icon-mail.svg') no-repeat center var(--devWhite)
       &:hover
-        background-color var(--devGrape)
+        border solid 3px var(--devWhite)
 
 .menu-checkbox
   display none

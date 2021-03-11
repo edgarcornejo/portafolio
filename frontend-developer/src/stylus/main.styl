@@ -17,66 +17,99 @@
 
 /*Principal*/
 #contenedor
-  height 100%
+  height auto
 
 #cabecera
-  height 100vh
   width 100%
-  background rgb(205,38,252);
-  background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%)
+  background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%), url("../img/top-back.jpg")
+  background-size cover
+  background-position 0 center
+  background-repeat no-repeat
+  background-blend-mode multiply
   color var(--devWhite)
   font-family 'Titillium Web', Helvetica, sans-serif
   #wrap-hgroup
     display flex
     justify-content flex-end
   hgroup
-    padding-top 25%
+    padding-top 15%
+    padding-bottom 5%
     width 82%
     text-align left
     h1
       font-size 5rem
-      letter-spacing 2px
+      line-height 95%
     h2
-      text-transform uppercase
-      font-size 2rem
-      font-weight lighter
+      font-size 3rem
+      letter-spacing 1px
       font-family 'Roboto', Helvetica, sans-serif
+
+.round
+  border-top 2rem solid var(--devGrape)
+  border-left 2rem solid transparent
 
 #cuerpo
   margin 0 auto
-  width 90%
-  max-width 1200px
-  padding 5% 0 5% 0
-  article
-    padding-bottom 8%
-    display flex
-    flex-wrap wrap
+  width 100%
+  padding 0 0 6% 0
+  article:nth-child(even)
     justify-content flex-end
+    text-align left
+  article:nth-child(odd)
+    text-align right
+  article
+    margin-top 10%
+    display flex
+    align-items center
+    align-content center
     .wrap-article
-      width 50%
-    h2
-      font-family 'Titillium Web', Helvetica, sans-serif
-      font-size 4rem
-      line-height 3.8rem
-      padding-bottom 1rem
-      color var(--devGrape)
-    h3
-      font-size 2rem
-      font-weight bolder
-      padding-bottom 2rem
-      text-transform uppercase
-      color var(--devLightGrey)
-    p
-      font-size 1.5rem
-      font-weight 200
-      line-height 2rem
-    .bot-call
-      background var(--devGrape)
-      display inline-block
-      font-size 1.2rem
-      color var(--devWhite)
-      border 0
+      width 60%
+      padding 5%
+      h2
+        font-family 'Titillium Web', Helvetica, sans-serif
+        font-size 4rem
+        line-height 3.8rem
+        padding-bottom 1rem
+        color var(--devGrape)
+        max-width 500px
+        display inline-block
+      h3
+        font-size 2rem
+        font-weight bolder
+        padding-bottom 2rem
+        text-transform uppercase
+        color var(--devOrange)
+      hr 
+        background var(--devGrape)
+      p
+        font-size 1.5rem
+        font-weight 200
+        line-height 2rem
+        max-width 500px
+        display inline-block
+      .bot-call
+        background var(--devGrape)
+        display inline-block
+        font-size 1.2rem
+        color var(--devWhite)
+        border 0
 
+/*background article*/
+#cuerpo
+  article
+    &:nth-child(1)
+      background url("../img/iam.jpg") no-repeat
+      background-size 40% auto
+      background-position 100% 0
+    &:nth-child(2)
+      background url("../img/services.jpg") no-repeat
+      background-size 40% auto
+      background-position 0 50%
+    &:nth-child(3)
+      background url("../img/contact.jpg") no-repeat
+      background-size 40% auto
+      background-position 100% 50%
+  
 footer
   position relative
   padding 4rem 0 4rem 0

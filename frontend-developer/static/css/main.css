@@ -309,7 +309,10 @@ a:hover {
   list-style: none;
   text-align: center;
 }
-#cabecera nav li a:hover {
+#cabecera nav a {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+#cabecera nav a:hover {
   font-weight: bolder;
   border-bottom: solid 1px var(--devWhite);
 }
@@ -322,18 +325,18 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
 }
 #cabecera #contact a:first-child {
-  background: url("../img/icon-tel.svg") no-repeat center;
+  background: url("../img/icon-tel.svg") no-repeat center var(--devWhite);
 }
 #cabecera #contact a:last-child {
-  background: url("../img/icon-mail.svg") no-repeat center;
+  background: url("../img/icon-mail.svg") no-repeat center var(--devWhite);
 }
 #cabecera #contact a:hover {
-  background-color: var(--devGrape);
+  border: solid 3px var(--devWhite);
 }
 .menu-checkbox {
   display: none;
@@ -363,13 +366,15 @@ a:hover {
    ========================================================================== */
 /*Principal*/
 #contenedor {
-  height: 100%;
+  height: auto;
 }
 #cabecera {
-  height: 100vh;
   width: 100%;
-  background: #cd26fc;
-  background: linear-gradient(-45deg, #cd26fc 0%, #8c3ef4 53%, #9184fa 100%);
+  background: linear-gradient(-45deg, #cd26fc 0%, #8c3ef4 53%, #9184fa 100%), url("../img/top-back.jpg");
+  background-size: cover;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
   color: var(--devWhite);
   font-family: 'Titillium Web', Helvetica, sans-serif;
 }
@@ -378,60 +383,94 @@ a:hover {
   justify-content: flex-end;
 }
 #cabecera hgroup {
-  padding-top: 25%;
+  padding-top: 15%;
+  padding-bottom: 5%;
   width: 82%;
   text-align: left;
 }
 #cabecera hgroup h1 {
   font-size: 5rem;
-  letter-spacing: 2px;
+  line-height: 95%;
 }
 #cabecera hgroup h2 {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: lighter;
+  font-size: 3rem;
+  letter-spacing: 1px;
   font-family: 'Roboto', Helvetica, sans-serif;
+}
+.round {
+  border-top: 2rem solid var(--devGrape);
+  border-left: 2rem solid transparent;
 }
 #cuerpo {
   margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
-  padding: 5% 0 5% 0;
+  width: 100%;
+  padding: 0 0 6% 0;
+}
+#cuerpo article:nth-child(even) {
+  justify-content: flex-end;
+  text-align: left;
+}
+#cuerpo article:nth-child(odd) {
+  text-align: right;
 }
 #cuerpo article {
-  padding-bottom: 8%;
+  margin-top: 10%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
 }
 #cuerpo article .wrap-article {
-  width: 50%;
+  width: 60%;
+  padding: 5%;
 }
-#cuerpo article h2 {
+#cuerpo article .wrap-article h2 {
   font-family: 'Titillium Web', Helvetica, sans-serif;
   font-size: 4rem;
   line-height: 3.8rem;
   padding-bottom: 1rem;
   color: var(--devGrape);
+  max-width: 500px;
+  display: inline-block;
 }
-#cuerpo article h3 {
+#cuerpo article .wrap-article h3 {
   font-size: 2rem;
   font-weight: bolder;
   padding-bottom: 2rem;
   text-transform: uppercase;
-  color: var(--devLightGrey);
+  color: var(--devOrange);
 }
-#cuerpo article p {
+#cuerpo article .wrap-article hr {
+  background: var(--devGrape);
+}
+#cuerpo article .wrap-article p {
   font-size: 1.5rem;
   font-weight: 200;
   line-height: 2rem;
+  max-width: 500px;
+  display: inline-block;
 }
-#cuerpo article .bot-call {
+#cuerpo article .wrap-article .bot-call {
   background: var(--devGrape);
   display: inline-block;
   font-size: 1.2rem;
   color: var(--devWhite);
   border: 0;
+}
+/*background article*/
+#cuerpo article:nth-child(1) {
+  background: url("../img/iam.jpg") no-repeat;
+  background-size: 40% auto;
+  background-position: 100% 0;
+}
+#cuerpo article:nth-child(2) {
+  background: url("../img/services.jpg") no-repeat;
+  background-size: 40% auto;
+  background-position: 0 50%;
+}
+#cuerpo article:nth-child(3) {
+  background: url("../img/contact.jpg") no-repeat;
+  background-size: 40% auto;
+  background-position: 100% 50%;
 }
 footer {
   position: relative;
