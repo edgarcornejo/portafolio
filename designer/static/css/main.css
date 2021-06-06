@@ -675,9 +675,39 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-/*@media screen and (max-width:1366px)
-
-@media screen and (max-width:1024px)*/
+@media screen and (max-width: 1366px) {
+  #content-intro div,
+  #content-presentation div,
+  #content-habilidades div,
+  #contacto div {
+    height: 150px;
+    background-size: 350px !important;
+  }
+  #content-intro div {
+    background: url("../img/sprite.png") no-repeat center -35px;
+  }
+  #content-presentation div {
+    background: url("../img/sprite.png") no-repeat center -220px;
+  }
+  #content-services .img-services {
+    background: url("../img/sprite.png") no-repeat center -400px;
+    height: 150px;
+    background-size: 350px;
+  }
+  #content-habilidades div {
+    background: url("../img/sprite.png") no-repeat center -590px;
+  }
+  #contacto div {
+    background: url("../img/sprite.png") no-repeat center -780px;
+  }
+  .title-article {
+    padding: 2rem 0 0 0;
+  }
+  .txt {
+    font-size: 1.3rem;
+  }
+}
+/*@media screen and (max-width:1024px)*/
 @media screen and (max-width: 768px) {
   #logo {
     background-size: 10%;
